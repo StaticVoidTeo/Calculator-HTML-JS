@@ -1,0 +1,95 @@
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:20px;
+}
+
+body{
+    margin:0;
+    background:linear-gradient(45deg,orange,yellow);
+    min-height:100vh;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.calc{
+    background-color:rgba(63, 63, 63, 0.934);
+    padding:10px;
+    border-radius:10px;
+    display:block;
+}
+
+.screen{
+    margin:10px 0 20px 0;
+    min-width:240px;
+    display:grid;
+    max-width:240px;
+}
+
+.pad{
+    min-height:240px;
+    display:grid;
+    grid-template-columns: repeat(4, 60px [col-start]);
+}
+
+button{
+    background-color:rgb(209, 136, 0);
+    border-radius:5px;
+    border:none;
+    color:white;
+    margin:3px;
+}
+
+button:hover{
+    background-color:rgb(255, 184, 54);
+    cursor:pointer;
+}
+
+#clear{
+    grid-column:span 2;
+}
+
+button[id="0"]{
+    grid-column-start: col-start 1;
+}
+
+button[id="clear"],[id="del"]{
+    background-color:rgb(179, 178, 178);
+}
+
+button[id="clear"]:hover,[id="del"]:hover{
+    background-color:rgb(211, 211, 211);
+}
+
+button[id="div"],[id="mul"],[id="min"],[id="plus"],[id="equal"]{
+    background-color:orange;
+}
+
+#div:hover{
+    background-color:rgb(255, 184, 54);
+}
+
+input[type="text"]{
+    text-align:end;
+    padding-right:18px;
+    color:rgb(153, 153, 153);
+    border:none;
+    border-radius:5px 5px 0 0 ;
+    min-height:30px;
+    background:linear-gradient(90deg,rgb(197, 197, 197),white);
+}
+
+input[id="input"]{
+    max-width:220px;
+    font-size:30px;
+    text-align:end;
+    color:rgb(110, 110, 110);
+    border:none;
+    border-radius:0 0 5px 5px;
+    min-height:30px;
+    background:linear-gradient(90deg,rgb(197, 197, 197),white);
+}
